@@ -8,7 +8,7 @@
         *{margin:0;padding:0;box-sizing:border-box;}
         body{font-family:Arial,sans-serif;background:#f5f5f5;color:#333;line-height:1.6;}
         .navbar{background:#003087;color:white;padding:1rem;position:fixed;top:0;width:100%;z-index:1000;}
-        .navbar ul{list-style:none;display:flex;justify-content:center;}
+        .navbar ul{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;}
         .navbar li{margin:0 1rem;}
         .navbar a{color:white;text-decoration:none;font-weight:bold;}
         .hero{background:#003087;color:white;text-align:center;padding:120px 20px 80px;}
@@ -18,9 +18,11 @@
         .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;}
         .card{background:white;padding:2rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
         .footer{background:#003087;color:white;text-align:center;padding:2rem;}
+        h2{text-align:center;margin-bottom:2rem;color:#003087;}
     </style>
 </head>
 <body>
+    <!-- NAVBAR (Fixed Blue like DDU) -->
     <nav class="navbar">
         <ul>
             <li><a href="#home">Home</a></li>
@@ -31,10 +33,105 @@
         </ul>
     </nav>
     
+    <!-- HERO SECTION -->
     <section id="home" class="hero">
         <div class="container">
             <h1>स के इंटर कॉलेज & स के महाविद्यालय</h1>
             <p>Tilauli Sohnag, Salempur, UP 274509 | ☎️ 075100 51044 | ⭐ 3.9 (24 Reviews)</p>
-            <p><strong>Best Inter College in Salempur Area</strong> - Arts & Science Faculty</p>
+            <p><strong>Best Inter College in Salempur Area</strong><br>Arts & Science Faculty</p>
         </div>
     </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About College</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Our Mission</h3>
+                    <p>Providing quality education in Arts & Science for Salempur area students.</p>
+                </div>
+                <div class="card">
+                    <h3>Reviews</h3>
+                    <p>"Best college in this area" - Minu Shrivastava<br>"Best inter college" - Rustam Ansari</p>
+                </div>
+                <div class="card">
+                    <h3>Location</h3>
+                    <p>Tilauli Sohnag, Salempur<br>7W97+36, Uttar Pradesh 274509</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES SECTION -->
+    <section id="courses" class="section">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Intermediate (10+2)</h3>
+                    <p>Arts & Science streams available</p>
+                </div>
+                <div class="card">
+                    <h3>BA / BSc</h3>
+                    <p>Graduation programs</p>
+                </div>
+                <div class="card">
+                    <h3>MA Programs</h3>
+                    <p>Post-graduation courses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOTICES SECTION -->
+    <section id="notices" class="section">
+        <div class="container">
+            <h2>Latest Notices</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Admission Open 2026</h3>
+                    <p>Apply now for Inter, BA, BSc programs</p>
+                </div>
+                <div class="card">
+                    <h3>Exam Schedule</h3>
+                    <p>Feb 2026 Board Exams - Details soon</p>
+                </div>
+                <div class="card">
+                    <h3>Fee Notice</h3>
+                    <p>1st Installment due March 15, 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Phone</h3>
+                    <p><a href="tel:07510051044">☎️ 075100 51044</a></p>
+                </div>
+                <div class="card">
+                    <h3>Website</h3>
+                    <p><a href="http://skedugroup.in">skedugroup.in</a></p>
+                </div>
+                <div class="card">
+                    <h3>Location</h3>
+                    <iframe src="https://maps.app.goo.gl/M1E9iQY8P4o18cKc9" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 स के इंटर कॉलेज & स के महाविद्यालय<br>
+            Tilauli Sohnag, Salempur, UP 274509 | 075100 51044</p>
+        </div>
+    </footer>
+</body>
+</html>
