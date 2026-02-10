@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <title>स के इंटर कॉलेज & स के महाविद्यालय - Courses</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #003087;
+            --secondary-blue: #0052cc;
+            --light-bg: #f8f9fa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)) !important;
+            box-shadow: 0 4px 20px rgba(0,48,135,0.3);
+            padding: 1rem 0;
+        }
+        .navbar-brand { font-weight: 700; font-size: 1.5rem; color: white !important; }
+        .hero-courses {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        .course-card {
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 100%;
+        }
+        .course-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        .course-card .card-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            border: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        .section-padding { padding: 80px 0; }
+        .section-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px; height: 4px;
+            background: var(--primary-blue);
+            position: absolute; bottom: -10px; left: 50%;
+            transform: translateX(-50%);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .footer {
+            background: var(--primary-blue);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        @media (max-width: 768px) {
+            .hero-courses { padding: 80px 20px; }
+            .hero-courses h1 { font-size: clamp(1.8rem, 6vw, 3rem); }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR (IDENTICAL) -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>SK College
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="notices.html">नोटिस</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- COURSES HERO -->
+    <section class="hero-courses">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">Our Academic Programs</h1>
+            <p class="lead fs-4 mb-4">Quality Education for Intermediate, Undergraduate & Postgraduate</p>
+            <p class="fs-5 mb-0">Admissions Open for 2026 Session | Last Date: March 15, 2026</p>
+        </div>
+    </section>
+
+    <!-- INTERMEDIATE COURSES -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Intermediate (10+2) Programs</h2>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-12">
+                    <div class="course-card h-100">
+                        <div class="card-header">
+                            <i class="fas fa-book me-2"></i>Arts Stream
+                        </div>
+                        <div class="card-body p-5">
+                            <h4 class="card-title fw-bold mb-4 fs-3">Intermediate Arts</h4>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>Hindi</li>
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>English</li>
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>History</li>
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>Geography</li>
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>Political Science</li>
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>Economics</li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="#admission" class="btn btn-primary btn-lg px-5">
+                                    <i class="fas fa-door-open me-2"></i>Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="course-card h-100">
+                        <div class="card-header">
+                            <i class="fas fa-flask me-2"></i>Science Stream
+                        </div>
+                        <div class="card-body p-5">
+                            <h4 class="card-title fw-bold mb-4 fs-3">Intermediate Science</h4>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>Physics</li>
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>Chemistry</li>
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>Mathematics</li>
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>Biology</li>
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>English</li>
+                                <li class="mb-3 fs-5"><i class="fas fa-check-circle text-success me-2"></i>Hindi</li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="#admission" class="btn btn-success btn-lg px-5">
+                                    <i class="fas fa-door-open me-2"></i>Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNDERGRADUATE COURSES -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Undergraduate Programs</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card h-100">
+                        <div class="card-header text-center">
+                            <i class="fas fa-graduation-cap me-2"></i>Bachelor of Arts (BA)
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h4 class="mb-4">3 Years Program</h4>
+                            <div class="features-grid mb-4">
+                                <div><i class="fas fa-book text-primary me-2"></i>Hindi Literature</div>
+                                <div><i class="fas fa-book text-primary me-2"></i>History</div>
+                                <div><i class="fas fa-book text-primary me-2"></i>Geography</div>
+                                <div><i class="fas fa-book text-primary me-2"></i>Political Science</div>
+                            </div>
+                            <div class="mb-3">
+                                <span class="badge bg-success fs-6 px-3 py-2">Seats: 240</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card h-100">
+                        <div class="card-header text-center">
+                            <i class="fas fa-flask me-2"></i>Bachelor of Science (BSc)
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h4 class="mb-4">3 Years Program</h4>
+                            <div class="features-grid mb-4">
+                                <div><i class="fas fa-flask text-success me-2"></i>Physics</div>
+                                <div><i class="fas fa-flask text-success me-2"></i>Chemistry</div>
+                                <div><i class="fas fa-flask text-success me-2"></i>Mathematics</div>
+                                <div><i class="fas fa-flask text-success me-2"></i>Zoology</div>
+                                <div><i class="fas fa-flask text-success me-2"></i>Botany</div>
+                            </div>
+                            <div class="mb-3">
+                                <span class="badge bg-primary fs-6 px-3 py-2">Seats: 120</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card h-100">
+                        <div class="card-header text-center">
+                            <i class="fas fa-chart-line me-2"></i>Bachelor of Commerce (BCom)
+                        </div>
+                        <div class="card-body p-4 text-center">
+                            <h4 class="mb-4">3 Years Program</h4>
+                            <div class="features-grid mb-4">
+                                <div><i class="fas fa-rupee-sign text-warning me-2"></i>Accountancy</div>
+                                <div><i class="fas fa-chart-bar text-warning me-2"></i>Business Studies</div>
+                                <div><i class="fas fa-calculator text-warning me-2"></i>Economics</div>
+                            </div>
+                            <div class="mb-3">
+                                <span class="badge bg-warning text-dark fs-6 px-3 py-2">Seats: 80</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADMISSION INFO -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" id="admission">Admission Process 2026</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-start border-primary border-5 p-4">
+                                <h5 class="text-primary mb-3"><i class="fas fa-calendar-check me-2"></i>Important Dates</h5>
+                                <ul class="list-unstyled fs-5">
+                                    <li class="mb-3"><strong>Application Start:</strong> Feb 11, 2026</li>
+                                    <li class="mb-3"><strong>Last Date:</strong> March 15, 2026</li>
+                                    <li class="mb-3"><strong>Merit List:</strong> March 20, 2026</li>
+                                    <li><strong>Session Start:</strong> April 1, 2026</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-start border-success border-5 p-4">
+                                <h5 class="text-success mb-3"><i class="fas fa-file-alt me-2"></i>Documents Required</h5>
+                                <ul class="list-unstyled fs-5">
+                                    <li class="mb-2">10th/12th Marksheet</li>
+                                    <li class="mb-2">Transfer Certificate</li>
+                                    <li class="mb-2">Character Certificate</li>
+                                    <li class="mb-2">Aadhar Card</li>
+                                    <li>4 Passport Photos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="card p-5 h-100">
+                        <i class="fas fa-door-open fa-4x text-primary mb-4"></i>
+                        <h3 class="fw-bold mb-4">Ready to Apply?</h3>
+                        <p class="lead mb-4">Contact us for admission guidance</p>
+                        <a href="tel:07510051044" class="btn btn-primary btn-lg px-5 mb-3">
+                            <i class="fas fa-phone me-2"></i>Call Now
+                        </a>
+                        <br>
+                        <a href="https://wa.me/917510051044" class="btn btn-success btn-lg px-5">
+                            <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (IDENTICAL) -->
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-graduation-cap me-2"></i>स के इंटर कॉलेज & स के महाविद्यालय</h5>
+                    <p class="mb-0">Best College in Salempur Area • Empowering Future Generations</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-2">Tilauli Sohnag, Salempur, UP 274509</p>
+                    <p class="mb-0">☎️ 075100 51044 | 🌐 skedugroup.in</p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="mb-0">&copy; 2026 SK Inter College & Mahavidyalaya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
