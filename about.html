@@ -1,19 +1,221 @@
-<!-- SAME navbar + footer as index.html, replace hero with: -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-5">About Our College</h2>
-    <div class="row g-5">
-      <div class="col-lg-8">
-        <h3 class="mb-4">Best College in Salempur Area</h3>
-        <p>स के इंटर कॉलेज & स के महाविद्यालय is committed to providing quality education in Arts & Science streams. Established to serve Tilauli Sohnag and surrounding areas.</p>
-        <div class="row g-4 mt-4">
-          <div class="col-md-6"><div class="card h-100 p-4"><h5>Principal's Message</h5><p>Coming Soon...</p></div></div>
-          <div class="col-md-6"><div class="card h-100 p-4"><h5>Facilities</h5><ul><li>Science Labs</li><li>Library</li><li>Computer Lab</li></ul></div></div>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <title>स के इंटर कॉलेज & स के महाविद्यालय - About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #003087;
+            --secondary-blue: #0052cc;
+            --light-bg: #f8f9fa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)) !important;
+            box-shadow: 0 4px 20px rgba(0,48,135,0.3);
+            padding: 1rem 0;
+        }
+        .navbar-brand { font-weight: 700; font-size: 1.5rem; color: white !important; }
+        .hero-about {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .section-padding { padding: 80px 0; }
+        .section-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px; height: 4px;
+            background: var(--primary-blue);
+            position: absolute; bottom: -10px; left: 50%;
+            transform: translateX(-50%);
+        }
+        .footer {
+            background: var(--primary-blue);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        @media (max-width: 768px) {
+            .hero-about { padding: 80px 20px; }
+            .hero-about h1 { font-size: clamp(1.8rem, 6vw, 3rem); }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR (IDENTICAL to index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>SK College
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="notices.html">नोटिस</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-4">
-        <iframe src="https://maps.app.goo.gl/M1E9iQY8P4o18cKc9" width="100%" height="400" style="border:0;border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
+    </nav>
+
+    <!-- ABOUT HERO -->
+    <section class="hero-about">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">About Our College</h1>
+            <p class="lead fs-4 mb-4">Best College in Salempur Area ⭐ Trusted for Generations</p>
+            <p class="fs-5">Tilauli Sohnag, Salempur, UP 274509 | 075100 51044</p>
+        </div>
+    </section>
+
+    <!-- PRINCIPAL SECTION -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Principal's Message</h2>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-4 text-center">
+                    <div class="card p-4 h-100 mx-auto" style="max-width: 300px;">
+                        <div class="position-relative mb-4">
+                            <img src="https://via.placeholder.com/300x300/003087/ffffff?text=Principal" 
+                                 class="img-fluid rounded-circle" style="width:250px;height:250px;">
+                            <div class="position-absolute bottom-0 end-0 bg-primary text-white rounded-circle p-2">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <h4 class="fw-bold mb-2">Dr. [Principal Name]</h4>
+                        <p class="text-muted mb-0">Principal</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <blockquote class="blockquote p-5 bg-white rounded-4 shadow">
+                        <p class="lead fs-4 mb-4">"स के इंटर कॉलेज & स के महाविद्यालय Salempur क्षेत्र का सबसे अच्छा कॉलेज है। हम छात्रों को गुणवत्तापूर्ण शिक्षा प्रदान करने के लिए प्रतिबद्ध हैं।"</p>
+                        <footer class="blockquote-footer fs-5">Vision for 2026 Academic Session</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLLEGE FEATURES -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Why Choose Us</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
+                        <h4 class="h5 fw-bold mb-3">Experienced Faculty</h4>
+                        <p class="text-muted">Highly qualified teachers with 10+ years experience</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-flask fa-3x text-success mb-3"></i>
+                        <h4 class="h5 fw-bold mb-3">Science Labs</h4>
+                        <p class="text-muted">Modern laboratories for practical learning</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-book-open fa-3x text-warning mb-3"></i>
+                        <h4 class="h5 fw-bold mb-3">Library</h4>
+                        <p class="text-muted">10,000+ books and digital resources</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-laptop fa-3x text-info mb-3"></i>
+                        <h4 class="h5 fw-bold mb-3">Computer Lab</h4>
+                        <p class="text-muted">40+ computers with internet access</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Our Location</h2>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 p-4">
+                                <h5 class="text-primary mb-3"><i class="fas fa-map-marker-alt me-2"></i>Address</h5>
+                                <p class="fs-5 mb-1">स के इंटर कॉलेज & स के महाविद्यालय</p>
+                                <p class="fs-5 mb-1">Tilauli Sohnag, Salempur</p>
+                                <p class="fs-5 mb-0">7W97+36, Uttar Pradesh 274509</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 p-4">
+                                <h5 class="text-success mb-3"><i class="fas fa-clock me-2"></i>Working Hours</h5>
+                                <ul class="list-unstyled fs-5">
+                                    <li class="mb-2">Mon-Sat: 9:30 AM - 5:00 PM</li>
+                                    <li>Sunday: Closed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <iframe src="https://maps.app.goo.gl/M1E9iQY8P4o18cKc9" 
+                            width="100%" height="400" style="border:0;border-radius:15px;" 
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (IDENTICAL to index.html) -->
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-graduation-cap me-2"></i>स के इंटर कॉलेज & स के महाविद्यालय</h5>
+                    <p class="mb-0">Best College in Salempur Area • Empowering Future Generations</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-2">Tilauli Sohnag, Salempur, UP 274509</p>
+                    <p class="mb-0">☎️ 075100 51044 | 🌐 skedugroup.in</p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="mb-0">&copy; 2026 SK Inter College & Mahavidyalaya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
