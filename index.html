@@ -1,48 +1,358 @@
-<!DOCTYPE html><html><head><title>स के इंटर कॉलेज & स के महाविद्यालय</title>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<style>body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);}.navbar{background:linear-gradient(135deg,#003087,#0052cc)!important;box-shadow:0 4px 20px rgba(0,48,135,0.3);}.hero{background:linear-gradient(rgba(0,48,135,0.9),rgba(0,82,204,0.8)),url('hero-bg.jpg');background-size:cover;background-position:center;padding:150px 0;color:white;}.card{border:none;box-shadow:0 10px 30px rgba(0,0,0,0.1);transition:all 0.3s ease;}.card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,0.2);}</style></head>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <title>स के इंटर कॉलेज & स के महाविद्यालय - Salempur</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #003087;
+            --secondary-blue: #0052cc;
+            --light-bg: #f8f9fa;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+        
+        /* NAVBAR - Fixed + Responsive */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)) !important;
+            box-shadow: 0 4px 20px rgba(0,48,135,0.3);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+        
+        /* HERO SECTION - Fullscreen Mobile */
+        .hero {
+            background: linear-gradient(rgba(0,48,135,0.9), rgba(0,82,204,0.8)), 
+                        url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGVsbGlwc2Ugc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIiBjeD0iNjAwIiBjeT0iMzAwIiByeD0iNDAwIiByeT0iMjAwIi8+Cjwvc3ZnPgo=') center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        /* CARDS - Hover Effects */
+        .card {
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        /* SECTIONS */
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--primary-blue);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* FOOTER */
+        .footer {
+            background: var(--primary-blue);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        /* MOBILE OPTIMIZATIONS */
+        @media (max-width: 768px) {
+            .hero { min-height: 80vh; padding: 100px 20px; }
+            .hero h1 { font-size: clamp(1.8rem, 6vw, 3rem); }
+            .navbar-brand { font-size: 1.2rem; }
+            .section-padding { padding: 50px 0; }
+        }
+        
+        /* TABLET */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .hero h1 { font-size: 2.8rem; }
+        }
+    </style>
+</head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold fs-3" href="#"><i class="fas fa-graduation-cap me-2"></i>SK College</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="notices.html">नोटिस</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>
+                SK College
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#notices">नोटिस</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<section id="home" class="hero text-center">
-  <div class="container">
-    <h1 class="display-3 fw-bold mb-4">स के इंटर कॉलेज & स के महाविद्यालय</h1>
-    <p class="lead mb-4">Tilauli Sohnag, Salempur, UP 274509 | <i class="fas fa-phone me-2"></i>075100 51044 | <i class="fas fa-star text-warning me-1"></i>3.9 (24 Reviews)</p>
-    <a href="#courses" class="btn btn-light btn-lg px-5 py-3 fs-5 fw-bold">Explore Courses</a>
-  </div>
-</section>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero text-center text-white">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
+                स के इंटर कॉलेज & स के महाविद्यालय
+            </h1>
+            <p class="lead fs-4 mb-4 animate__animated animate__fadeInUp">
+                <i class="fas fa-map-marker-alt me-2"></i>Tilauli Sohnag, Salempur, UP 274509<br>
+                <i class="fas fa-phone me-2"></i><a href="tel:07510051044" class="text-white text-decoration-none">075100 51044</a> | 
+                <i class="fas fa-star text-warning"></i> 3.9 (24 Reviews)
+            </p>
+            <a href="#courses" class="btn btn-light btn-lg px-5 py-3 fs-5 fw-bold animate__animated animate__pulse animate__infinite">
+                <i class="fas fa-book me-2"></i>Explore Courses
+            </a>
+        </div>
+    </section>
 
-<section class="py-5">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-4 text-center"><div class="card h-100 p-4"><i class="fas fa-users fa-3x text-primary mb-3"></i><h3 class="h4">5000+</h3><p class="text-muted">Students</p></div></div>
-      <div class="col-md-4 text-center"><div class="card h-100 p-4"><i class="fas fa-award fa-3x text-warning mb-3"></i><h3 class="h4">Top Ranked</h3><p class="text-muted">Salempur Area</p></div></div>
-      <div class="col-md-4 text-center"><div class="card h-100 p-4"><i class="fas fa-calendar-check fa-3x text-success mb-3"></i><h3 class="h4">Admissions Open</h3><p class="text-muted">2026 Session</p></div></div>
-    </div>
-  </div>
-</section>
+    <!-- STATS SECTION -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 p-4">
+                        <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                        <h2 class="display-4 fw-bold text-primary mb-2">5000+</h2>
+                        <p class="h5 text-muted">Happy Students</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 p-4">
+                        <i class="fas fa-award fa-3x text-warning mb-3"></i>
+                        <h2 class="display-4 fw-bold text-warning mb-2">#1</h2>
+                        <p class="h5 text-muted">Salempur Area</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 p-4">
+                        <i class="fas fa-calendar-check fa-3x text-success mb-3"></i>
+                        <h2 class="display-4 fw-bold text-success mb-2">2026</h2>
+                        <p class="h5 text-muted">Admissions Open</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer class="bg-dark text-white py-5 mt-5">
-  <div class="container text-center">
-    <p class="mb-0">&copy; 2026 स के इंटर कॉलेज & स के महाविद्यालय | Tilauli Sohnag, Salempur | 075100 51044</p>
-  </div>
-</footer>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">About Our College</h2>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7">
+                    <h3 class="mb-4 fs-2 fw-bold">Best College in Salempur Area</h3>
+                    <p class="lead mb-4 fs-5">स के इंटर कॉलेज & स के महाविद्यालय proudly serves Tilauli Sohnag and surrounding areas with quality education in Arts & Science streams. Trusted by thousands of students for 10+ years.</p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 p-4">
+                                <h5 class="text-primary mb-3"><i class="fas fa-quote-left me-2"></i>Reviews</h5>
+                                <p class="mb-0">"Best college in this area. My personal experience is very good."</p>
+                                <small class="text-muted">- Minu Shrivastava (Local Guide)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card p-4 h-100">
+                        <iframe src="https://maps.app.goo.gl/M1E9iQY8P4o18cKc9" width="100%" height="350" style="border:0;border-radius:15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body></html>
+    <!-- COURSES SECTION -->
+    <section id="courses" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Our Courses</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body text-center p-5">
+                            <i class="fas fa-school fa-4x text-primary mb-4"></i>
+                            <h4 class="card-title mb-3">Intermediate (10+2)</h4>
+                            <p class="card-text lead">Arts & Science streams with experienced faculty and modern facilities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body text-center p-5">
+                            <i class="fas fa-graduation-cap fa-4x text-success mb-4"></i>
+                            <h4 class="card-title mb-3">BA / BSc</h4>
+                            <p class="card-text lead">Undergraduate programs designed for career success.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body text-center p-5">
+                            <i class="fas fa-user-graduate fa-4x text-warning mb-4"></i>
+                            <h4 class="card-title mb-3">Post Graduation</h4>
+                            <p class="card-text lead">MA programs for advanced studies and research.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOTICES SECTION -->
+    <section id="notices" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Latest Notices <i class="fas fa-newspaper ms-2"></i></h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-start border-primary border-5">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary mb-2">
+                                <i class="fas fa-door-open me-2"></i>Admission Open 2026
+                            </h5>
+                            <p class="card-text">Apply now for Intermediate, BA, BSc programs. Last date: March 15, 2026</p>
+                            <small class="text-muted">Posted: Feb 11, 2026</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-start border-success border-5">
+                        <div class="card-body">
+                            <h5 class="card-title text-success mb-2">
+                                <i class="fas fa-calendar-alt me-2"></i>Exam Schedule
+                            </h5>
+                            <p class="card-text">February 2026 Board Exams - Detailed schedule available soon</p>
+                            <small class="text-muted">Posted: Feb 10, 2026</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-start border-warning border-5">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning mb-2">
+                                <i class="fas fa-rupee-sign me-2"></i>Fee Notice
+                            </h5>
+                            <p class="card-text">1st Installment due March 15, 2026. Late fee applicable after due date.</p>
+                            <small class="text-muted">Posted: Feb 9, 2026</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Contact Information</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-phone fa-3x text-primary mb-3"></i>
+                        <h4>Phone</h4>
+                        <p class="lead mb-0">
+                            <a href="tel:07510051044" class="text-decoration-none">
+                                <i class="fas fa-phone me-2"></i>075100 51044
+                            </a>
+                        </p>
+                        <a href="https://wa.me/917510051044" class="btn btn-success mt-3">
+                            <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-globe fa-3x text-info mb-3"></i>
+                        <h4>Website</h4>
+                        <p class="lead mb-0">
+                            <a href="http://skedugroup.in" class="text-decoration-none">skedugroup.in</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="card h-100 p-4">
+                        <h4 class="mb-3">Find Us</h4>
+                        <iframe src="https://maps.app.goo.gl/M1E9iQY8P4o18cKc9" width="100%" height="250" style="border:0;border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="mt-3">
+                            <p class="mb-1"><i class="fas fa-map-marker-alt me-2 text-danger"></i>Tilauli Sohnag, Salempur</p>
+                            <p class="mb-0"><i class="fas fa-hashtag me-2 text-secondary"></i>7W97+36, Uttar Pradesh 274509</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-graduation-cap me-2"></i>स के इंटर कॉलेज & स के महाविद्यालय</h5>
+                    <p class="mb-0">Best College in Salempur Area • Empowering Future Generations</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-2">Tilauli Sohnag, Salempur, UP 274509</p>
+                    <p class="mb-0">☎️ 075100 51044 | 🌐 skedugroup.in</p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="mb-0">&copy; 2026 SK Inter College & Mahavidyalaya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
