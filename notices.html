@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <title>स के इंटर कॉलेज & स के महाविद्यालय - नोटिस बोर्ड</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #003087;
+            --secondary-blue: #0052cc;
+            --light-bg: #f8f9fa;
+            --notice-red: #dc3545;
+            --notice-orange: #fd7e14;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)) !important;
+            box-shadow: 0 4px 20px rgba(0,48,135,0.3);
+            padding: 1rem 0;
+        }
+        .navbar-brand { font-weight: 700; font-size: 1.5rem; color: white !important; }
+        .hero-notices {
+            background: linear-gradient(135deg, var(--notice-red), var(--notice-orange));
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        .notice-card {
+            border-left: 5px solid var(--notice-red);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .notice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(220,53,69,0.2);
+        }
+        .notice-urgent {
+            border-left-color: var(--notice-orange) !important;
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+        }
+        .section-padding { padding: 80px 0; }
+        .section-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px; height: 4px;
+            background: var(--primary-blue);
+            position: absolute; bottom: -10px; left: 50%;
+            transform: translateX(-50%);
+        }
+        .notice-date {
+            background: var(--primary-blue);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+        .pdf-download {
+            background: var(--notice-red);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .pdf-download:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+            color: white !important;
+            text-decoration: none;
+        }
+        .footer {
+            background: var(--primary-blue);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        @media (max-width: 768px) {
+            .hero-notices { padding: 80px 20px; }
+            .hero-notices h1 { font-size: clamp(1.8rem, 6vw, 3rem); }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>SK College
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="notices.html">नोटिस</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NOTICES HERO -->
+    <section class="hero-notices">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">नोटिस बोर्ड</h1>
+            <p class="lead fs-4 mb-4">Latest Updates & Important Announcements</p>
+            <div class="row g-3 justify-content-center">
+                <div class="col-auto">
+                    <span class="badge bg-light text-dark fs-6 px-4 py-2 fw-bold">Last Updated: Feb 11, 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- URGENT NOTICES -->
+    <section class="section-padding bg-warning bg-opacity-10">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">
+                🚨 Urgent Notices <small class="text-muted d-block">Must Read Immediately</small>
+            </h2>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-12">
+                    <div class="notice-card notice-urgent h-100">
+                        <div class="card-body p-5">
+                            <div class="d-flex justify-content-between align-items-start mb-4">
+                                <span class="notice-date">Feb 11, 2026</span>
+                                <span class="badge bg-danger">URGENT</span>
+                            </div>
+                            <h3 class="fw-bold mb-4 fs-3 text-danger">Admission Last Date Extended!</h3>
+                            <p class="lead mb-4 fs-5">Due to high demand, admission deadline extended till <strong>March 20, 2026</strong>. Apply immediately!</p>
+                            <a href="#" class="pdf-download mb-3 d-block">
+                                <i class="fas fa-download me-2"></i>Download Prospectus [PDF]
+                            </a>
+                            <p class="text-muted small mb-0">Contact: 075100 51044</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="notice-card notice-urgent h-100">
+                        <div class="card-body p-5">
+                            <div class="d-flex justify-content-between align-items-start mb-4">
+                                <span class="notice-date">Feb 10, 2026</span>
+                                <span class="badge bg-warning text-dark">IMPORTANT</span>
+                            </div>
+                            <h3 class="fw-bold mb-4 fs-3 text-warning">Fee Payment Notice</h3>
+                            <p class="lead mb-4 fs-5">1st installment due date: <strong>March 15, 2026</strong>. Late fee ₹500 after due date.</p>
+                            <a href="#" class="pdf-download mb-3 d-block">
+                                <i class="fas fa-download me-2"></i>Fee Structure [PDF]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGULAR NOTICES -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">All Notices</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="notice-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="notice-date">Feb 9, 2026</span>
+                                <i class="fas fa-calendar-alt text-muted"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Exam Schedule Released</h4>
+                            <p class="mb-4">February 2026 Board Exams schedule now available for download.</p>
+                            <a href="#" class="pdf-download d-block">
+                                <i class="fas fa-download me-2"></i>Exam Schedule [PDF]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="notice-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="notice-date">Feb 8, 2026</span>
+                                <i class="fas fa-calendar-alt text-muted"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Cultural Fest 2026</h4>
+                            <p class="mb-4">Annual cultural festival on March 5, 2026. Participation open to all students.</p>
+                            <a href="#" class="pdf-download d-block">
+                                <i class="fas fa-download me-2"></i>Event Details [PDF]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="notice-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="notice-date">Feb 7, 2026</span>
+                                <i class="fas fa-calendar-alt text-muted"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Library Timings Changed</h4>
+                            <p class="mb-4">New library timings: Mon-Sat 9AM-6PM. Sunday closed.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="notice-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="notice-date">Feb 6, 2026</span>
+                                <i class="fas fa-calendar-alt text-muted"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Sports Day Registration</h4>
+                            <p class="mb-4">Annual sports day on March 25. Register by Feb 20.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="notice-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="notice-date">Feb 5, 2026</span>
+                                <i class="fas fa-calendar-alt text-muted"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Scholarship Forms</h4>
+                            <p class="mb-4">Government scholarship forms available at office.</p>
+                            <a href="#" class="pdf-download d-block">
+                                <i class="fas fa-download me-2"></i>Scholarship Form [PDF]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="notice-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="notice-date">Feb 4, 2026</span>
+                                <i class="fas fa-calendar-alt text-muted"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Uniform Guidelines</h4>
+                            <p class="mb-4">New uniform policy effective from March 1, 2026.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCHIVED NOTICES -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">📁 Archived Notices</h2>
+            <div class="row g-3">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card border-0 bg-transparent h-100 p-3 text-center">
+                            <i class="fas fa-folder fa-2x text-muted mb-2"></i>
+                            <h6 class="fw-bold text-primary">January 2026</h6>
+                            <small class="text-muted">12 Notices</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card border-0 bg-transparent h-100 p-3 text-center">
+                            <i class="fas fa-folder fa-2x text-muted mb-2"></i>
+                            <h6 class="fw-bold text-success">December 2025</h6>
+                            <small class="text-muted">15 Notices</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card border-0 bg-transparent h-100 p-3 text-center">
+                            <i class="fas fa-folder fa-2x text-muted mb-2"></i>
+                            <h6 class="fw-bold text-warning">November 2025</h6>
+                            <small class="text-muted">10 Notices</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card border-0 bg-transparent h-100 p-3 text-center">
+                            <i class="fas fa-folder fa-2x text-muted mb-2"></i>
+                            <h6 class="fw-bold text-info">Older Archives</h6>
+                            <small class="text-muted">50+ Notices</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-graduation-cap me-2"></i>स के इंटर कॉलेज & स के महाविद्यालय</h5>
+                    <p class="mb-0">Best College in Salempur Area • Empowering Future Generations</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-2">Tilauli Sohnag, Salempur, UP 274509</p>
+                    <p class="mb-0">☎️ 075100 51044 | 🌐 skedugroup.in</p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="mb-0">&copy; 2026 SK Inter College & Mahavidyalaya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
