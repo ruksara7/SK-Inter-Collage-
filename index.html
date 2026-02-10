@@ -1,137 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>स के इंटर कॉलेज & स के महाविद्यालय</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body{font-family:Arial,sans-serif;background:#f5f5f5;color:#333;line-height:1.6;}
-        .navbar{background:#003087;color:white;padding:1rem;position:fixed;top:0;width:100%;z-index:1000;}
-        .navbar ul{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;}
-        .navbar li{margin:0 1rem;}
-        .navbar a{color:white;text-decoration:none;font-weight:bold;}
-        .hero{background:#003087;color:white;text-align:center;padding:120px 20px 80px;}
-        .hero h1{font-size:2.5rem;margin-bottom:1rem;}
-        .container{max-width:1200px;margin:0 auto;padding:0 20px;}
-        .section{padding:60px 0;}
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;}
-        .card{background:white;padding:2rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
-        .footer{background:#003087;color:white;text-align:center;padding:2rem;}
-        h2{text-align:center;margin-bottom:2rem;color:#003087;}
-    </style>
-</head>
+<!DOCTYPE html><html><head><title>स के इंटर कॉलेज & स के महाविद्यालय</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<style>body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%);}.navbar{background:linear-gradient(135deg,#003087,#0052cc)!important;box-shadow:0 4px 20px rgba(0,48,135,0.3);}.hero{background:linear-gradient(rgba(0,48,135,0.9),rgba(0,82,204,0.8)),url('hero-bg.jpg');background-size:cover;background-position:center;padding:150px 0;color:white;}.card{border:none;box-shadow:0 10px 30px rgba(0,0,0,0.1);transition:all 0.3s ease;}.card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,0.2);}</style></head>
 <body>
-    <!-- NAVBAR (Fixed Blue like DDU) -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#notices">नोटिस</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>स के इंटर कॉलेज & स के महाविद्यालय</h1>
-            <p>Tilauli Sohnag, Salempur, UP 274509 | ☎️ 075100 51044 | ⭐ 3.9 (24 Reviews)</p>
-            <p><strong>Best Inter College in Salempur Area</strong><br>Arts & Science Faculty</p>
-        </div>
-    </section>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" href="#"><i class="fas fa-graduation-cap me-2"></i>SK College</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="notices.html">नोटिस</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About College</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Our Mission</h3>
-                    <p>Providing quality education in Arts & Science for Salempur area students.</p>
-                </div>
-                <div class="card">
-                    <h3>Reviews</h3>
-                    <p>"Best college in this area" - Minu Shrivastava<br>"Best inter college" - Rustam Ansari</p>
-                </div>
-                <div class="card">
-                    <h3>Location</h3>
-                    <p>Tilauli Sohnag, Salempur<br>7W97+36, Uttar Pradesh 274509</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="home" class="hero text-center">
+  <div class="container">
+    <h1 class="display-3 fw-bold mb-4">स के इंटर कॉलेज & स के महाविद्यालय</h1>
+    <p class="lead mb-4">Tilauli Sohnag, Salempur, UP 274509 | <i class="fas fa-phone me-2"></i>075100 51044 | <i class="fas fa-star text-warning me-1"></i>3.9 (24 Reviews)</p>
+    <a href="#courses" class="btn btn-light btn-lg px-5 py-3 fs-5 fw-bold">Explore Courses</a>
+  </div>
+</section>
 
-    <!-- COURSES SECTION -->
-    <section id="courses" class="section">
-        <div class="container">
-            <h2>Our Courses</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Intermediate (10+2)</h3>
-                    <p>Arts & Science streams available</p>
-                </div>
-                <div class="card">
-                    <h3>BA / BSc</h3>
-                    <p>Graduation programs</p>
-                </div>
-                <div class="card">
-                    <h3>MA Programs</h3>
-                    <p>Post-graduation courses</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4 text-center"><div class="card h-100 p-4"><i class="fas fa-users fa-3x text-primary mb-3"></i><h3 class="h4">5000+</h3><p class="text-muted">Students</p></div></div>
+      <div class="col-md-4 text-center"><div class="card h-100 p-4"><i class="fas fa-award fa-3x text-warning mb-3"></i><h3 class="h4">Top Ranked</h3><p class="text-muted">Salempur Area</p></div></div>
+      <div class="col-md-4 text-center"><div class="card h-100 p-4"><i class="fas fa-calendar-check fa-3x text-success mb-3"></i><h3 class="h4">Admissions Open</h3><p class="text-muted">2026 Session</p></div></div>
+    </div>
+  </div>
+</section>
 
-    <!-- NOTICES SECTION -->
-    <section id="notices" class="section">
-        <div class="container">
-            <h2>Latest Notices</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Admission Open 2026</h3>
-                    <p>Apply now for Inter, BA, BSc programs</p>
-                </div>
-                <div class="card">
-                    <h3>Exam Schedule</h3>
-                    <p>Feb 2026 Board Exams - Details soon</p>
-                </div>
-                <div class="card">
-                    <h3>Fee Notice</h3>
-                    <p>1st Installment due March 15, 2026</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer class="bg-dark text-white py-5 mt-5">
+  <div class="container text-center">
+    <p class="mb-0">&copy; 2026 स के इंटर कॉलेज & स के महाविद्यालय | Tilauli Sohnag, Salempur | 075100 51044</p>
+  </div>
+</footer>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Phone</h3>
-                    <p><a href="tel:07510051044">☎️ 075100 51044</a></p>
-                </div>
-                <div class="card">
-                    <h3>Website</h3>
-                    <p><a href="http://skedugroup.in">skedugroup.in</a></p>
-                </div>
-                <div class="card">
-                    <h3>Location</h3>
-                    <iframe src="https://maps.app.goo.gl/M1E9iQY8P4o18cKc9" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 स के इंटर कॉलेज & स के महाविद्यालय<br>
-            Tilauli Sohnag, Salempur, UP 274509 | 075100 51044</p>
-        </div>
-    </footer>
-</body>
-</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body></html>
